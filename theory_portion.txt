@@ -1,0 +1,65 @@
+Q1. List any five functions of the pandas library with execution.
+Ans--> 1.read_csv(): This function is used to read a CSV file and create a pandas DataFrame object from it.
+
+Example:
+
+import pandas as pd
+
+# read csv file into a pandas DataFrame
+df = pd.read_csv('data.csv')
+
+2.head(): This function is used to display the first n rows of a DataFrame.
+
+Example:
+# display the first 5 rows of the DataFrame
+print(df.head())
+
+3.describe(): This function is used to generate descriptive statistics for a DataFrame.
+
+Example:
+# generate descriptive statistics for the DataFrame
+print(df.describe())
+
+4.groupby(): This function is used to group the DataFrame by one or more columns and apply a function to each group.
+
+Example:
+# group the DataFrame by 'category' column and calculate the mean of 'price' column for each group
+df.groupby('category')['price'].mean()
+
+5.to_csv(): This function is used to write a DataFrame to a CSV file.
+
+Example:
+# write the DataFrame to a CSV file
+df.to_csv('output.csv')
+
+Q5. How are DataFrame.size() and DataFrame.shape() different?
+Ans--> Both DataFrame.size() and DataFrame.shape() are methods of a Pandas DataFrame object that return information about the size or shape of the DataFrame, but they have different meanings and return different values.
+
+DataFrame.size() returns the total number of elements in the DataFrame, which is equal to the product of the number of rows and the number of columns. It returns a scalar value of type int.
+
+On the other hand, DataFrame.shape() returns a tuple of integers that represents the number of rows and columns in the DataFrame, respectively. The first element of the tuple is the number of rows, and the second element is the number of columns. For example, if a DataFrame has 10 rows and 5 columns, DataFrame.shape() will return the tuple (10, 5).
+
+Q6. Which function of pandas do we use to read an excel file?
+Ans--> To read an Excel file in Pandas, we use the read_excel() function, which is a part of the pandas library.
+
+Here is an example code snippet that shows how to use the read_excel() function to read an Excel file and create a Pandas DataFrame:
+
+import pandas as pd
+
+# Read Excel file and create DataFrame
+df = pd.read_excel('example.xlsx')
+
+# Print the first 5 rows of the DataFrame
+print(df.head())
+
+In this example, we first import the pandas library using the import statement. Then, we use the read_excel() function to read an Excel file named example.xlsx. This function returns a Pandas DataFrame object that we assign to the variable df. Finally, we use the head() method to print the first 5 rows of the DataFrame.
+
+Q13. To use the basic functions of pandas, what is the first and foremost necessary library that needs to
+be imported?
+Ans--> To use the basic functions of pandas, the first and foremost necessary library that needs to be imported is pandas itself.
+
+You can import the pandas library using the following command:
+
+import pandas as pd
+
+This will import the pandas library and make it available for use in your Python code. By convention, the pandas library is usually imported with the alias pd, which makes it easier to refer to its functions and classes.
